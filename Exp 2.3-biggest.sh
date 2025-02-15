@@ -1,6 +1,10 @@
-echo “Enter number-1:”
-read x
-echo “Enter number-2:”
-read y
-S=$(($x+$y))
-echo “Sum is:”$S
+echo “Enter the first number:”
+read m
+echo “Enter the second number:”
+read n
+if (($m>$n))
+	then 
+	    echo “Larger number is:”$m
+else
+	    echo “Larger number is:”$n
+fi
