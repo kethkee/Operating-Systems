@@ -41,8 +41,7 @@ else
 {
   m[j].alloc=1;
   p[i].flag=1;
-}
-printf("\n%d\t%d\t\t%d\n",i,p[i].psize,m[j].size);
+  printf("\n%d\t%d\t\t%d\n",i,p[i].psize,m[j].size);
 }
 }
 }
