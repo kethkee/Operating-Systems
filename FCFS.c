@@ -45,7 +45,7 @@ printf(" P[%d]\t",i+1);
 }
 printf("\n");
 printf("\n========================================================================\n");
-for(i=0;i<=n;i++)
+for(i=0;i<n;i++)
 {
 printf("\t%d",temp);
 temp=temp+btime[i];
