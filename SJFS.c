@@ -27,7 +27,7 @@ void main() {
     for (i = 1; i < n; i++)
       {
         wt[i] = wt[i - 1] + bt[i - 1];
-        avgwt+=wtime[i];
+        avgwt+=wt[i];
       }
   avgwt/=n;
   
@@ -36,7 +36,7 @@ void main() {
     for (i = 0; i < n; i++)
       {
         tt[i] = wt[i] + bt[i];
-        avgtt+=ttime[i];
+        avgtt+=tt[i];
       }
   avgtt/=n;
   printf("Average waiting time = %f\n",avgwt);
