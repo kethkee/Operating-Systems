@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 int main() {
     int n, quantum, i, time = 0, remaining;
     
@@ -8,7 +9,7 @@ int main() {
     
     int btime[n], remaining_time[n], wtime[n], ttime[n];
     
-   
+    
     printf("Enter the burst time:\n");
     for (i = 0; i < n; i++) {
         printf("Process-%d burst time: ", i + 1);
@@ -28,7 +29,6 @@ int main() {
     while (remaining > 0) {
         for (i = 0; i < n; i++) {
             if (remaining_time[i] > 0) {
-                
                 process_order[index] = i + 1;
                 order_time[index] = time;
                 index++;
@@ -38,7 +38,7 @@ int main() {
                     remaining_time[i] -= quantum;
                 } else {
                     time += remaining_time[i];
-                    wtime[i] = time - btime[i]; 
+                    wtime[i] = time - btime[i];  
                     remaining_time[i] = 0;
                     remaining--;
                 }
@@ -64,20 +64,21 @@ int main() {
 
     
     printf("\n========================================================================\n");
-    printf("Gantt Chart\n\t");
+    printf("Gantt Chart\n");
+
+    
+    printf("\t");
     for (i = 0; i < index; i++) {
         printf(" P[%d] ", process_order[i]);
     }
-    printf("\n========================================================================\n");
+    printf("\n");
 
+    
+    printf("\t");
     for (i = 0; i < index; i++) {
         printf("%d\t", order_time[i]);
     }
-    printf("%d\n", time); 
-    
+    printf("%d\n", time);  
+
     return 0;
 }
-
-
-  
-  
